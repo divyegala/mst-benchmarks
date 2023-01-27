@@ -1,3 +1,3 @@
 #datasets
-datasets/*.gr
-datasets/*.gr.gz
+*.gr
+*.gr.gz

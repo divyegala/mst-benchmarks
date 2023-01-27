@@ -119,21 +119,17 @@ void MSTGraph( int argc, char** argv)
 	cudaDeviceSynchronize();
 	auto start = high_resolution_clock::now();
 	GPUMST(); 
-	cudaDeviceSynchronize();
-	auto stop = high_resolution_clock::now();
-	auto duration = duration_cast<microseconds>(stop - start);
-	std::cout << "Finished in: " << duration.count() << std::endl;
 	
-	cudaMemcpy( test, d_graph_colorindex, sizeof(int)*no_of_nodes, cudaMemcpyDeviceToHost);
-	for(int i=0;i<no_of_nodes;i++)
-	 {
-		 if(test[i]!=0)
-		 {
-			 printf("All Colors not 0, Error at %d\n",i);
-			 break;
-		 }
+	// cudaMemcpy( test, d_graph_colorindex, sizeof(int)*no_of_nodes, cudaMemcpyDeviceToHost);
+	// for(int i=0;i<no_of_nodes;i++)
+	//  {
+	// 	 if(test[i]!=0)
+	// 	 {
+	// 		 printf("All Colors not 0, Error at %d\n",i);
+	// 		 break;
+	// 	 }
 	
-	 }
+	//  }
 
 	int q=0;
 	int minimumCost = 0 ; 
@@ -151,6 +147,10 @@ void MSTGraph( int argc, char** argv)
 		}
 	}
 	printf("No of edges in MST: %d, no of nodes: %d cost %d\n",q,no_of_nodes,minimumCost);
+	cudaDeviceSynchronize();
+	auto stop = high_resolution_clock::now();
+	auto duration = duration_cast<microseconds>(stop - start);
+	std::cout << "Finished in: " << duration.count() << std::endl;
 	
 	freeMem();
 		

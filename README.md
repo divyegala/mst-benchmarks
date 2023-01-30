@@ -1,14 +1,14 @@
 # mst-benchmarks
 
-# Requirements
+## Requirements
 - Anaconda (or Miniconda)
 
-# Cloning this repo
+## Cloning this repo
 ```
 git clone --recurse-submodules https://github.com/divyegala/mst-benchmarks.git
 ```
 
-# Run benchmarks
+## Run benchmarks
 ```
 bash run_benchmarks.sh
 ```

@@ -1,3 +1,6 @@
 [submodule "sousa-2015"]
 	path = sousa-2015
 	url = git@github.com:divyegala/sousa-2015.git
+[submodule "cugraph"]
+	path = cugraph
+	url = git@github.com:divyegala/cugraph.git

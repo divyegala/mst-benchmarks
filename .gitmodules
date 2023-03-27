@@ -1,6 +1,6 @@
 [submodule "sousa-2015"]
 	path = sousa-2015
-	url = https://github.com:divyegala/sousa-2015.git
+	url = https://github.com/divyegala/sousa-2015.git
 [submodule "cugraph"]
 	path = cugraph
-	url = https://github.com:divyegala/cugraph.git
+	url = https://github.com/divyegala/cugraph.git
